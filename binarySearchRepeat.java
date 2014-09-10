@@ -1,8 +1,8 @@
 
-public class binarySearchRepeat {
+public class BinarySearchRepeat {
 
 	/**
-	 * @param args
+	 * Recursive and non-recursive binary search algorithms.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,9 +23,7 @@ public class binarySearchRepeat {
 		int a = 0;
 		while(i<j && a < 10){
 			a++;
-			mid = (j+i)/2;
-			//System.out.println(i+" " + j + " " + mid + " " + array[mid] + " " + query);
-			
+			mid = (j+i)/2;			
 			if(array[mid] == query){
 				return mid;
 			}
