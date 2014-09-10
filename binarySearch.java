@@ -1,16 +1,16 @@
 
-public class binarySearch {
+public class BinarySearch {
 
 	/**
-	 * @param args
+	 * Given a phonebook and a phone number N, search whether N is in the phonebook. Return its position or -1 if N isn't in the list.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a = {1, 3, 5, 6, 7, 9 , 11 , 12 , 13, 14 };
 		PhoneBook pb = new PhoneBook(a);
-		int five = pb.findNum(11);
+		int eleven = pb.findNum(11);
 		int eight = pb.findNum(8);
-		System.out.print(five + "" +  eight);
+		System.out.print(eleven + "" +  eight);
 	}
 	public static class PhoneBook {
 		int[] list = new int[10];
