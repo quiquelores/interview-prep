@@ -1,14 +1,14 @@
 
-public class efficientTransformLinkedList {
+public class EfficientTransformLinkedList {
 
 	/**
-	 * @param args
+	 * Given a linked list transform it such that the last element becomes the second element, the second to last becomes the fourth element, 
+	 * third to last sixth,etc.
+	 * Example: A -> B -> C -> D  ---> A -> D -> B -> C
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	//	A -> B -> C -> D  ---> A -> D -> B -> C
-		
-		
+				
 		Node D = new Node("D", null);
 		Node C = new Node("C", D);
 		Node B = new Node("B", C);
@@ -41,11 +41,6 @@ public class efficientTransformLinkedList {
 			l3.addToEnd(l1.popFirst());
 			l3.addToEnd(list.popFirst());
 		}
-		
-		//reverse list2
-		
-		//take first from list1 and first from list2 repetitively and put into resList
-		
 		Node printAux2 = new Node("After: ", l3.first);
 		while(printAux2 != null){
 			System.out.println(printAux2.data);
@@ -99,6 +94,4 @@ public class efficientTransformLinkedList {
 			this.last = revList.last;
 		}
 	}
-	
-
 }

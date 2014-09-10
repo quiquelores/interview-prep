@@ -1,5 +1,5 @@
 
-public class longestStreakInArray {
+public class LongestStreakInArrayFinder {
 
 	/**
 	 * @param args

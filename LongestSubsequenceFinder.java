@@ -1,5 +1,5 @@
 
-public class longestSubsequence {
+public class LongestSubsequenceFinder {
 
 	/**
 	 * @param args

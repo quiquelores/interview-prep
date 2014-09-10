@@ -15,7 +15,4 @@ public class randomExercises {
 		int res = i1 + i2;
 		return Integer.toString(res);
 	}
-	
-	
-	
 }
