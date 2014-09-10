@@ -1,8 +1,8 @@
 
-public class binarySearchTree {
+public class BinarySearchTree {
 
 	/**
-	 * @param args
+	 * Create a perfect binary search tree from an array of integers with in, pre, post order traversals, and anything else you think might be useful.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,29 +35,6 @@ public class binarySearchTree {
 
 		perfectTree.traverseInOrder(perfectTree.head);
 
-	/*	1 2 3 4 5 6 7 8 9
-	 
-				5
-			2		7
-		1		3	6	8
-		 		  4			9
-		PRE: 52137689
-		POST:  					
-	*/	
-			
-	/*	
-				6
-			5		8
-		3				9
-	1	 	4
-	*/	
-		
-	/*	
-				5
-			2				7
-		1 		3		6		8
-	*/	
-		
 		Node one = new Node(1);
 		Node three = new Node(3);
 		Node two = new Node(2, one, three);
@@ -75,8 +52,6 @@ public class binarySearchTree {
 		System.out.println();
 		System.out.println("POST");
 		bst.traversePostOrder(bst.head);*/
-
-
 	}
 	
 	public static class BSTree{
@@ -139,6 +114,8 @@ public class binarySearchTree {
 		
 		//traversals
 		public void traverseInOrder(Node aux){
+			//if there's a child, visit child. then visit itself. then visit right.
+
 			//Node aux = this.head;
 			if(aux != null){
 				
@@ -152,15 +129,12 @@ public class binarySearchTree {
 					traverseInOrder(aux.right);
 				}
 			}
-			//if there's a child, visit child. then visit itself. then visit right.
 			
 		}
 		public void traversePostOrder(Node aux){
 				if(aux != null){
-				
 					traversePostOrder(aux.left);
 					traversePostOrder(aux.right);
-				
 					visit(aux);
 				}
 		}
