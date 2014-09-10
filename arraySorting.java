@@ -1,12 +1,12 @@
 
-public class arraySorting {
+public class ArraySorting {
 
 	/**
-	 * @param args
+	 * Array sorting algorithms
 	 */
 	
 	  private static final int SIZE = 50;
-	  private static final int DIGITS = 3;  // change printf %4d
+	  private static final int DIGITS = 3;
 	  private static final int MAX_VALUE = (int)Math.pow(10,DIGITS)-1;
 	  private static final int NUM_PER_LINE = 10;
 	  private static int[] values = new int[SIZE];
@@ -24,6 +24,7 @@ public class arraySorting {
 	    return true;
 	  }
 
+	  //Swaps are only be performed only during insertion sort.
 	  private static void swap (int i, int j) {
 	    int t = values[i];
 	    values[i] = values[j];
@@ -41,7 +42,7 @@ public class arraySorting {
 	    System.out.println();
 	  }
 	public static void main(String[] args) {
-		/*initValues();
+		initValues();
 	    printValues();
 	    System.out.printf("The array %s initially sorted.",
 	              isSorted() ? "is" : "is not");
@@ -49,20 +50,15 @@ public class arraySorting {
 	    printValues();
 	    System.out.printf("After performing %d swaps,\n", numSwaps);
 	    System.out.printf("the array is %s sorted.",
-	                      isSorted() ? "now" : "still not");*/
+	                      isSorted() ? "now" : "still not");
 	                      
-	     String s1 = "abc";
-	     String s2 = s1;
-	     System.out.println(s2.equals(s1));
-	     System.out.println(s1 == s2);
-	     System.out.println("Askja");
-
 	  }
 
 	  private static void sortValues() {
+		  // call sort program here
+
 		  //insertionSort();
 		  mergeSort(0, SIZE-1);
-	    // call sort program here
 	  }
 	  private static void insertionSort(){
 		  for(int i = 0; i< SIZE; i++){		 
@@ -79,8 +75,6 @@ public class arraySorting {
 	   * 3 , 5 -- 1,4
 	   * mergesort() first half, second half
 	   * 3 -- 5 -- 1 -- 4
-	   * 
-	   * 
 	   */
 	  private static void mergeSort(int first, int last){
 		  if(first < last){
